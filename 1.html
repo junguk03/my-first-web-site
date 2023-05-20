@@ -14,6 +14,19 @@
         <meta charset="utf-8">
     </head>
     <body>
+<<<<<<< HEAD
+=======
+        <input id="night_day" type="button" value="day" onclick="
+            if(this.value === 'night'){
+                myself('black', 'white', 'yellow');
+                this.value = 'day';
+            }
+            else{
+                myself('white', 'black', 'blue');
+                this.value = 'night';
+            }
+        ">
+>>>>>>> 243a0c7 (add js practice)
         <h1><a href="index.html">WEB</a></h1>
         <ol>
             <li><a href="1.html">HTML</a></li>
@@ -45,6 +58,21 @@
                 })();
             </script>
                 <!--End of Tawk.to Script-->
+<<<<<<< HEAD
+=======
+            <script>
+                function myself(groundColor, textColor, aColor){
+                    document.querySelector('body').style.backgroundColor = groundColor;
+                    document.querySelector('body').style.color = textColor;
+                    var i=0;
+                    var alist = document.querySelectorAll('a');
+                    while(i < alist.length){
+                        alist[i].style.color = aColor;
+                        i++;
+                    }
+                }
+            </script>
+>>>>>>> 243a0c7 (add js practice)
         </p>
     </body>
 </html>

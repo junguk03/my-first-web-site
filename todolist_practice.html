@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>todolist</title>
+    </head>
+    <body id="cen">
+        <h1>To Do List</h1>
+        <script>
+            document.getElementById("cen").style.textAlign = "center";
+        </script>
+        <script>
+            function jbSubmit() {
+                const arr = new Array();
+                arr.push(pw1.value);
+                let i = 0;
+                const content = document.getElementById('pw1');
+                const list = document.createElement('li');
+                const toDoList = document.getElementById('toDoList');
+                if(!content.value){
+                    alert("입력 좀 해주세여");
+                }
+                else{
+                    while(i < arr.length){
+                        list.innerHTML = content.value;
+                        toDoList.appendChild(list);
+                        content.value= "";
+                        i++;
+                    }
+                }
+                list.addEventListener('click',function(){
+                    list.style.textDecorationLine = "line-through";
+                })
+                list.addEventListener('dblclick',function(){
+                    toDoList.removeChild(list);
+                })    
+            }
+        </script>
+        <input type="text" id="pw1" style="border: 1px solid gray;">
+        <button onclick="jbSubmit()">+</button>
+        <div id="toDoList"></div>
+    </body>
+</html>

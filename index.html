@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< HEAD
         <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMDTRT656Y"></script>
 <script>
@@ -14,6 +15,30 @@
         <meta charset="utf-8">
     </head>
     <body>
+=======
+        <meta charset="utf-8">      
+        <title>WEB1 - html</title>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMDTRT656Y"></script>
+        <!-- Google tag (gtag.js) -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date()); 
+            gtag('config', 'G-DMDTRT656Y');
+        </script>
+    </head>
+    <body>
+        <input id="night_day" type="button" value="day" onclick="
+            if(this.value === 'night'){
+                myself('black', 'white', 'yellow');
+                this.value = 'day';
+            }
+            else{
+                myself('white', 'black', 'blue');
+                this.value = 'night';
+            }
+        ">
+>>>>>>> 243a0c7 (add js practice)
         <h1><a href="index.html">WEB</a></h1>
         <ol>
             <li><a href="1.html">HTML</a></li>
@@ -39,6 +64,21 @@
                 })();
             </script>
                 <!--End of Tawk.to Script-->
+<<<<<<< HEAD
+=======
+            <script>
+                function myself(groundColor, textColor, aColor){
+                    document.querySelector('body').style.backgroundColor = groundColor;
+                    document.querySelector('body').style.color = textColor;
+                    var i=0;
+                    var alist = document.querySelectorAll('a');
+                    while(i < alist.length){
+                        alist[i].style.color = aColor;
+                        i++;
+                    }
+                }
+            </script>
+>>>>>>> 243a0c7 (add js practice)
         </p>
     </body>
 </html>
