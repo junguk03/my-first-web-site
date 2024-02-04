@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <script>
+        document.querySelector('body').style.textAlign = "center";
+    </script>
+    <script>
+        function jbSubmit() {
+            const content = document.getElementById("pw1");
+            const list = document.createElement("li");
+            const todolist = document.getElementById("todolist");
+            
+            if(!content.value){
+                alert("입력해 뒤지기 싫으면");
+            }
+            else{
+                list.innerHTML = content.value;
+                todolist.append(list);
+                content.value = "";
+            }
+            list.addEventListener('click',function(){
+                if(list.style.textDecorationLine == "line-through"){
+                    list.style.textDecorationLine = null;
+                }
+                else{
+                    list.style.textDecorationLine = "line-through";
+                }
+            })
+            list.addEventListener("dblclick",function(){
+                todolist.removeChild(list);
+            })
+
+        }
+    </script>
+
+
+    <input type="text" id="pw1">
+    <button type="button" onclick="jbSubmit()">+</button>
+    <div id="todolist"></div>
+</body>
+</html>
